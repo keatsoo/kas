@@ -13,9 +13,9 @@ import java.awt.event.KeyEvent;
 
 public class KasWindow extends JFrame {
 
-    private static final JTextField nameTextField = new JTextField();
-    private static final JTextField receiverIPTextField = new JTextField();
-    private static final JTextArea messageTextArea = new JTextArea();
+    private static JTextField nameTextField = new JTextField();
+    private static JTextField receiverIPTextField = new JTextField();
+    private static JTextArea messageTextArea = new JTextArea();
 
     public KasWindow(String title){
         // WINDOW DATA
