@@ -2,9 +2,10 @@ package me.kitsou.kas;
 
 public class KasApp {
     public static void main(String[] args){
-        System.out.println("Demat d'ar bed !");
+        System.out.println("Started kas... :)");
 
         KasWindow window = new KasWindow("kas - STILL IN PROTOTYPE PHASE");
         window.setVisible(true);
+        System.out.println("[INFO] : Window set to visible.");
     }
 }
