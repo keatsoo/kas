@@ -1,5 +1,10 @@
 package me.kitsou.kas;
 
+import me.kitsou.kas.menuBarListeners.ConnectMenuListener;
+import me.kitsou.kas.menuBarListeners.MyIPListener;
+import me.kitsou.kas.menuBarListeners.SaveMenuItemListener;
+import me.kitsou.kas.sendPanelListeners.SendBtnListener;
+
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
@@ -7,12 +12,18 @@ import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
 public class KasWindow extends JFrame {
+
+    private static final JTextField nameTextField = new JTextField();
+    private static final JTextField receiverIPTextField = new JTextField();
+    private static final JTextArea messageTextArea = new JTextArea();
+
     public KasWindow(String title){
         // WINDOW DATA
         setTitle(title);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(600, 400);
         setLocationRelativeTo(null);
+        setResizable(false);
 
         // LOOK AND FEEL
         System.out.println("[INFO] : Trying to load touch and feel...");
@@ -50,7 +61,6 @@ public class KasWindow extends JFrame {
         nameLabelConstr.gridwidth = 2;
         sendingPanel.add(nameLabel, nameLabelConstr);
 
-        JTextField nameTextField = new JTextField();
         nameTextField.setColumns(15);
         GridBagConstraints nameTextFieldConstr = new GridBagConstraints();
         nameTextFieldConstr.gridx = 1;
@@ -66,7 +76,6 @@ public class KasWindow extends JFrame {
         receiverIPLabelConstr.gridwidth = 2;
         sendingPanel.add(receiverIPLabel, receiverIPLabelConstr);
 
-        JTextField receiverIPTextField = new JTextField();
         receiverIPTextField.setColumns(15);
         GridBagConstraints recIPTextFieldConstr = new GridBagConstraints();
         recIPTextFieldConstr.gridx = 1;
@@ -82,7 +91,6 @@ public class KasWindow extends JFrame {
         messageLabelConstr.gridwidth = 2;
         sendingPanel.add(messageLabel, messageLabelConstr);
 
-        JTextArea messageTextArea = new JTextArea();
         messageTextArea.setRows(7);
         messageTextArea.setColumns(15);
         GridBagConstraints messTextAreaConstr = new GridBagConstraints();
@@ -99,7 +107,20 @@ public class KasWindow extends JFrame {
         errorLabelConstr.gridwidth = 2;
         sendingPanel.add(errorLabel,errorLabelConstr);
 
-        // JButton cancelBtn = new JButton("Cancel");
+        JButton cancelBtn = new JButton("Cancel");
+        GridBagConstraints cancelBtnConstr = new GridBagConstraints();
+        cancelBtnConstr.gridx = 1;
+        cancelBtnConstr.gridy = 8;
+        cancelBtnConstr.gridwidth = 1;
+        sendingPanel.add(cancelBtn,cancelBtnConstr);
+
+        JButton sendBtn = new JButton("Send !");
+        sendBtn.addActionListener(new SendBtnListener());
+        GridBagConstraints sendBtnConstr = new GridBagConstraints();
+        sendBtnConstr.gridx = 2;
+        sendBtnConstr.gridy = 8;
+        sendBtnConstr.gridwidth = 1;
+        sendingPanel.add(sendBtn,sendBtnConstr);
     }
 
 
@@ -129,4 +150,9 @@ public class KasWindow extends JFrame {
 
         return menuBar;
     }
+
+    public static KasMessage getMessageData(){
+        return new KasMessage(nameTextField.getText(), receiverIPTextField.getText(), messageTextArea.getText());
+    }
+
 }

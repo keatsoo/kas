@@ -1,4 +1,4 @@
-package me.kitsou.kas;
+package me.kitsou.kas.menuBarListeners;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

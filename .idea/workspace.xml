@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="started ui">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="started to work on the sending panel">
+      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/sendPanelListeners/SendBtnListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ConnectMenuListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/menuBarListeners/ConnectMenuListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/KasWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/MyIPListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/menuBarListeners/MyIPListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/SaveMenuItemListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/menuBarListeners/SaveMenuItemListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/corretto-11.0.15/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,12 +51,12 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="KasApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="me.kitsou.kas.KasApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.kitsou.kas.KasApp" />
       <module name="kas" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.kitsou.kas.*" />
+          <option name="PATTERN" value="me.kitsou.kas.menuBarListeners.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -59,7 +66,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.KasApp" />
+        <item itemvalue="Application.me.kitsou.kas.KasApp" />
       </list>
     </recent_temporary>
   </component>
@@ -100,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657535580376</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="started to work on the sending panel">
+      <created>1657548471886</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657548471886</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,6 +133,7 @@
     <MESSAGE value="created a window" />
     <MESSAGE value="added things to readme.md" />
     <MESSAGE value="started ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="started ui" />
+    <MESSAGE value="started to work on the sending panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="started to work on the sending panel" />
   </component>
 </project>
