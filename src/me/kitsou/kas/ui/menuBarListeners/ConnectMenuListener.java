@@ -1,13 +1,13 @@
-package me.kitsou.kas.menuBarListeners;
+package me.kitsou.kas.ui.menuBarListeners;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MyIPListener implements ActionListener {
+public class ConnectMenuListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JFrame frame = (JFrame)(((JMenuItem)(e.getSource())).getTopLevelAncestor());
-        JOptionPane.showMessageDialog(frame, "IP not implemented yet.");
+        JOptionPane.showMessageDialog(frame, "Connect not implemented yet.");
     }
 }

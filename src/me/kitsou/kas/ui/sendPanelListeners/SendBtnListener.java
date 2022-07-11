@@ -1,7 +1,7 @@
-package me.kitsou.kas.sendPanelListeners;
+package me.kitsou.kas.ui.sendPanelListeners;
 
-import me.kitsou.kas.KasMessage;
-import me.kitsou.kas.KasWindow;
+import me.kitsou.kas.ui.KasMessage;
+import me.kitsou.kas.ui.KasWindow;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -17,6 +17,6 @@ public class SendBtnListener implements ActionListener {
 
     private void confirmMessage(JFrame window){
         KasMessage message = KasWindow.getMessageData();
-        JOptionPane.showMessageDialog(window, "Do you want to send this message to \"" + message.getReceiver() + "\" (" + message.getReceiverIP() + ") : \" " + message.getMessageContents() + "\" ?");
+        JOptionPane.showMessageDialog(window, "Do you want to send this message to " + message.getReceiverIP() + " as " + message.getSenderName() + " : \"" + message.getMessageContents() + "\" ?");
     }
 }

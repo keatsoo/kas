@@ -1,18 +1,18 @@
-package me.kitsou.kas;
+package me.kitsou.kas.ui;
 
 public class KasMessage {
-    private String receiver;
+    private String sender;
     private String receiverIP;
     private String messageContents;
 
     public KasMessage(String sender, String senderIP, String messageContents){
-        this.receiver = sender;
+        this.sender = sender;
         this.receiverIP = senderIP;
         this.messageContents = messageContents;
     }
 
-    public String getReceiver() {
-        return receiver;
+    public String getSenderName() {
+        return sender;
     }
 
     public String getReceiverIP() {

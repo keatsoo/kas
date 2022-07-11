@@ -1,9 +1,10 @@
-package me.kitsou.kas;
+package me.kitsou.kas.ui;
 
-import me.kitsou.kas.menuBarListeners.ConnectMenuListener;
-import me.kitsou.kas.menuBarListeners.MyIPListener;
-import me.kitsou.kas.menuBarListeners.SaveMenuItemListener;
-import me.kitsou.kas.sendPanelListeners.SendBtnListener;
+import me.kitsou.kas.ui.menuBarListeners.ConnectMenuListener;
+import me.kitsou.kas.ui.menuBarListeners.MyIPListener;
+import me.kitsou.kas.ui.menuBarListeners.SaveMenuItemListener;
+import me.kitsou.kas.ui.sendPanelListeners.CancelBtnListener;
+import me.kitsou.kas.ui.sendPanelListeners.SendBtnListener;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -108,6 +109,7 @@ public class KasWindow extends JFrame {
         sendingPanel.add(errorLabel,errorLabelConstr);
 
         JButton cancelBtn = new JButton("Cancel");
+        cancelBtn.addActionListener(new CancelBtnListener());
         GridBagConstraints cancelBtnConstr = new GridBagConstraints();
         cancelBtnConstr.gridx = 1;
         cancelBtnConstr.gridy = 8;
@@ -153,6 +155,11 @@ public class KasWindow extends JFrame {
 
     public static KasMessage getMessageData(){
         return new KasMessage(nameTextField.getText(), receiverIPTextField.getText(), messageTextArea.getText());
+    }
+
+    public static void clearMessage(){
+        messageTextArea.setText("");
+        receiverIPTextField.setText("");
     }
 
 }

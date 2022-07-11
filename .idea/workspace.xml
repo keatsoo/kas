@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="started to work on the sending panel">
-      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/sendPanelListeners/SendBtnListener.java" afterDir="false" />
+    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="fixed final">
+      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/sendPanelListeners/CancelBtnListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ConnectMenuListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/menuBarListeners/ConnectMenuListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/KasMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/KasWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/MyIPListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/menuBarListeners/MyIPListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/SaveMenuItemListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/menuBarListeners/SaveMenuItemListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/sendPanelListeners/SendBtnListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/sendPanelListeners/SendBtnListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,12 +49,12 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="me.kitsou.kas.KasApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="KasApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.kitsou.kas.KasApp" />
       <module name="kas" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.kitsou.kas.menuBarListeners.*" />
+          <option name="PATTERN" value="me.kitsou.kas.ui.menuBarListeners.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,7 +112,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657548471886</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added buttons and programmed the send button">
+      <created>1657557118852</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657557118852</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fixed final">
+      <created>1657557196999</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657557196999</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +146,8 @@
     <MESSAGE value="added things to readme.md" />
     <MESSAGE value="started ui" />
     <MESSAGE value="started to work on the sending panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="started to work on the sending panel" />
+    <MESSAGE value="added buttons and programmed the send button" />
+    <MESSAGE value="fixed final" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed final" />
   </component>
 </project>
