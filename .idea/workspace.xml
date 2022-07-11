@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="added things to readme.md">
-      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ConnectMenuListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/MyIPListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/SaveMenuItemListener.java" afterDir="false" />
+    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="started ui">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/KasApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/KasWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657472153194</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="started ui">
+      <created>1657535580376</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657535580376</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +118,7 @@
     <MESSAGE value="started the repo" />
     <MESSAGE value="created a window" />
     <MESSAGE value="added things to readme.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="added things to readme.md" />
+    <MESSAGE value="started ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="started ui" />
   </component>
 </project>
