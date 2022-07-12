@@ -14,7 +14,6 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 public class KasWindow extends JFrame {
-
     private static JTextField nameTextField = new JTextField("", 15);
     private static JTextField receiverIPTextField = new JTextField("", 15);
     private static JTextArea messageTextArea = new JTextArea("", 7, 15);
@@ -103,14 +102,6 @@ public class KasWindow extends JFrame {
         messTextAreaConstr.gridwidth = 2;
         sendingPanel.add(messageTextArea, messTextAreaConstr);
 
-        JLabel errorLabel = new JLabel();
-        errorLabel.setSize(180,20);
-        GridBagConstraints errorLabelConstr = new GridBagConstraints();
-        errorLabelConstr.gridx = 1;
-        errorLabelConstr.gridy = 7;
-        errorLabelConstr.gridwidth = 2;
-        sendingPanel.add(errorLabel,errorLabelConstr);
-
         JButton cancelBtn = new JButton("Cancel");
         cancelBtn.addActionListener(new CancelBtnListener());
         GridBagConstraints cancelBtnConstr = new GridBagConstraints();
@@ -136,7 +127,6 @@ public class KasWindow extends JFrame {
         messPanConstr.gridy = 1;
         messPanConstr.weightx = 0.1;
         contentPane.add(messagesPanel, messPanConstr);
-        //messagesPanel.add(Box.createRigidArea(new Dimension(80, 300)));
 
         revalidate();
         repaint();
@@ -177,6 +167,7 @@ public class KasWindow extends JFrame {
                     }
                 }
             }
+            sendingPanel.revalidate();
         }
     }
 
@@ -223,5 +214,4 @@ public class KasWindow extends JFrame {
         System.out.println("is messagesArray not empty ?" + !messagesArray.isEmpty());
         System.out.println("messagesArray.size() = " + messagesArray.size());
     }
-
 }
