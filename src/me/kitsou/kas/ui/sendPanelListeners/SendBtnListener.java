@@ -6,7 +6,7 @@ import me.kitsou.kas.ui.KasWindow;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Objects;
+import java.util.Arrays;
 
 public class SendBtnListener implements ActionListener {
 
@@ -20,7 +20,7 @@ public class SendBtnListener implements ActionListener {
         KasMessage message = KasWindow.getMessageData();
 
         if (!message.getSenderName().isBlank()){
-            if (!message.getReceiverIP().isBlank()){
+            if (isValidInet4Address(message.getReceiverIP())){
                 if (!message.getMessageContents().isBlank()){
                     KasWindow.addMessage(message);
                 } else {
@@ -34,6 +34,25 @@ public class SendBtnListener implements ActionListener {
         } else {
             JOptionPane.showMessageDialog(window, "The name can't be empty !");
             System.err.println("EMPTY NAME !");
+        }
+    }
+
+    private boolean isValidInet4Address(String ip)
+    {
+        String[] groups = ip.split("\\.");
+
+        if (groups.length != 4) {
+            return false;
+        }
+
+        try {
+            return Arrays.stream(groups)
+                    .filter(s -> s.length() > 1 && s.startsWith("0"))
+                    .map(Integer::parseInt)
+                    .filter(i -> (i >= 0 && i <= 255))
+                    .count() == 4;
+        } catch (NumberFormatException e) {
+            return false;
         }
     }
 }
