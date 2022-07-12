@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="finished messagePanel and implemented an arraylist">
+    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="fixed ip check">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/KasApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/sendPanelListeners/SendBtnListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/sendPanelListeners/SendBtnListener.java" afterDir="false" />
     </list>
@@ -35,19 +37,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ajini/Downloads/JetBrains-Discord-Integration-1.9.0.zip&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ToolWindowRun.ShowToolbar": "false",
+    "last_opened_file_path": "C:/Program Files/Java/libraries",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="me.kitsou.kas.KasApp" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="me.kitsou.kas.ui" />
     </key>
@@ -144,7 +149,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657587854989</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Blocked the user from sending either an empty mess, with an empty name or to an empty ip">
+      <created>1657631416449</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657631416449</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed ip check">
+      <created>1657631859838</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1657631859838</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,6 +187,8 @@
     <MESSAGE value="fixed final" />
     <MESSAGE value="refactored and updated README.md" />
     <MESSAGE value="finished messagePanel and implemented an arraylist" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished messagePanel and implemented an arraylist" />
+    <MESSAGE value="Blocked the user from sending either an empty mess, with an empty name or to an empty ip" />
+    <MESSAGE value="fixed ip check" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed ip check" />
   </component>
 </project>

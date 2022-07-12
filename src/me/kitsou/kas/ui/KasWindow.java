@@ -1,5 +1,6 @@
 package me.kitsou.kas.ui;
 
+import me.kitsou.kas.KasApp;
 import me.kitsou.kas.ui.menuBarListeners.ConnectMenuListener;
 import me.kitsou.kas.ui.menuBarListeners.MyIPListener;
 import me.kitsou.kas.ui.menuBarListeners.SaveMenuItemListener;
@@ -11,14 +12,12 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
 
 public class KasWindow extends JFrame {
     private static JTextField nameTextField = new JTextField("", 15);
     private static JTextField receiverIPTextField = new JTextField("", 15);
     private static JTextArea messageTextArea = new JTextArea("", 7, 15);
 
-    private static ArrayList<KasMessage> messagesArray = new ArrayList<>();
     public KasWindow(String title){
         // WINDOW DATA
         setTitle(title);
@@ -142,8 +141,8 @@ public class KasWindow extends JFrame {
         boolean noMessMess = false;
         JLabel noMessLabel = new JLabel("Sorry, there is no message yet :(");
         int printedNb = 0;
-        while (messagesArray.size() < 20){
-            if(messagesArray.isEmpty()){
+        while (KasApp.getMessagesArray().size() < 20){
+            if(KasApp.getMessagesArray().isEmpty()){
                 if(!noMessMess){
                     messagesContainer.add(noMessLabel);
                     messagesContainer.revalidate();
@@ -153,12 +152,12 @@ public class KasWindow extends JFrame {
                 System.out.println("[INFO] : Messages Array is empty");
             } else {
                 messagesContainer.remove(noMessLabel);
-                System.out.println((printedNb < messagesArray.size()) + " cuz nb " + printedNb + " size " + messagesArray.size());
+                System.out.println((printedNb < KasApp.getMessagesArray().size()) + " cuz nb " + printedNb + " size " + KasApp.getMessagesArray().size());
                 noMessMess = false;
-                if(printedNb < messagesArray.size()){
+                if(printedNb < KasApp.getMessagesArray().size()){
                     messagesContainer.removeAll();
                     printedNb = 0;
-                    for (KasMessage messageItem : messagesArray) {
+                    for (KasMessage messageItem : KasApp.getMessagesArray()) {
                         messagesContainer.add(new KasMessageUI(messageItem));
                         messagesContainer.revalidate();
                         System.out.println("[INFO] : Message found");
@@ -208,10 +207,4 @@ public class KasWindow extends JFrame {
         receiverIPTextField.setText("");
     }
 
-    public static void addMessage(KasMessage mess){
-        messagesArray.add(mess);
-        System.out.println("added message.");
-        System.out.println("is messagesArray not empty ?" + !messagesArray.isEmpty());
-        System.out.println("messagesArray.size() = " + messagesArray.size());
-    }
 }
