@@ -11,13 +11,15 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 public class KasWindow extends JFrame {
 
-    private static JTextField nameTextField = new JTextField();
-    private static JTextField receiverIPTextField = new JTextField();
-    private static JTextArea messageTextArea = new JTextArea();
+    private static JTextField nameTextField = new JTextField("", 15);
+    private static JTextField receiverIPTextField = new JTextField("", 15);
+    private static JTextArea messageTextArea = new JTextArea("", 7, 15);
 
+    private static ArrayList<KasMessage> messagesArray = new ArrayList<>();
     public KasWindow(String title){
         // WINDOW DATA
         setTitle(title);
@@ -25,6 +27,8 @@ public class KasWindow extends JFrame {
         setSize(600, 400);
         setLocationRelativeTo(null);
         setResizable(false);
+        setVisible(true);
+        System.out.println("[INFO] : Window set to visible.");
 
         // LOOK AND FEEL
         System.out.println("[INFO] : Trying to load touch and feel...");
@@ -45,13 +49,16 @@ public class KasWindow extends JFrame {
         // MENU BAR
         this.setJMenuBar(kasCreateMenuBar());
 
+
         // SENDING PANEL CREATION
         JPanel sendingPanel = new JPanel();
+        sendingPanel.setBorder(BorderFactory.createTitledBorder("Send"));
         GridBagConstraints sendPanelConstr = new GridBagConstraints();
         sendPanelConstr.gridx = 1;
         sendPanelConstr.gridy = 1;
         contentPane.add(sendingPanel, sendPanelConstr);
         sendingPanel.setLayout(new GridBagLayout());
+        //sendingPanel.add(Box.createRigidArea(new Dimension(150,150)));
 
         // SENDING PANEL LAYOUT
         JLabel nameLabel = new JLabel("Enter your name :");
@@ -62,7 +69,6 @@ public class KasWindow extends JFrame {
         nameLabelConstr.gridwidth = 2;
         sendingPanel.add(nameLabel, nameLabelConstr);
 
-        nameTextField.setColumns(15);
         GridBagConstraints nameTextFieldConstr = new GridBagConstraints();
         nameTextFieldConstr.gridx = 1;
         nameTextFieldConstr.gridy = 2;
@@ -77,7 +83,6 @@ public class KasWindow extends JFrame {
         receiverIPLabelConstr.gridwidth = 2;
         sendingPanel.add(receiverIPLabel, receiverIPLabelConstr);
 
-        receiverIPTextField.setColumns(15);
         GridBagConstraints recIPTextFieldConstr = new GridBagConstraints();
         recIPTextFieldConstr.gridx = 1;
         recIPTextFieldConstr.gridy = 4;
@@ -92,8 +97,6 @@ public class KasWindow extends JFrame {
         messageLabelConstr.gridwidth = 2;
         sendingPanel.add(messageLabel, messageLabelConstr);
 
-        messageTextArea.setRows(7);
-        messageTextArea.setColumns(15);
         GridBagConstraints messTextAreaConstr = new GridBagConstraints();
         messTextAreaConstr.gridx = 1;
         messTextAreaConstr.gridy = 6;
@@ -123,6 +126,58 @@ public class KasWindow extends JFrame {
         sendBtnConstr.gridy = 8;
         sendBtnConstr.gridwidth = 1;
         sendingPanel.add(sendBtn,sendBtnConstr);
+
+
+        // MESSAGES PANEL CREATION
+        JPanel messagesPanel = new JPanel();
+        messagesPanel.setBorder(BorderFactory.createTitledBorder("Messages"));
+        GridBagConstraints messPanConstr = new GridBagConstraints();
+        messPanConstr.gridx = 2;
+        messPanConstr.gridy = 1;
+        messPanConstr.weightx = 0.1;
+        contentPane.add(messagesPanel, messPanConstr);
+        //messagesPanel.add(Box.createRigidArea(new Dimension(80, 300)));
+
+        revalidate();
+        repaint();
+
+        // MESSAGES PANEL VIEWPORT
+        JScrollPane messScrollPane = new JScrollPane(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        messagesPanel.add(messScrollPane);
+        JPanel messagesContainer = new JPanel();
+        messagesContainer.setLayout(new BoxLayout(messagesContainer, BoxLayout.PAGE_AXIS));
+        messagesPanel.add(messagesContainer);
+
+        // ADD MESSAGES
+        boolean noMessMess = false;
+        JLabel noMessLabel = new JLabel("Sorry, there is no message yet :(");
+        int printedNb = 0;
+        while (messagesArray.size() < 20){
+            if(messagesArray.isEmpty()){
+                if(!noMessMess){
+                    messagesContainer.add(noMessLabel);
+                    messagesContainer.revalidate();
+                    noMessMess = true;
+                    System.out.println("[INFO] : No message");
+                }
+                System.out.println("[INFO] : Messages Array is empty");
+            } else {
+                messagesContainer.remove(noMessLabel);
+                System.out.println((printedNb < messagesArray.size()) + " cuz nb " + printedNb + " size " + messagesArray.size());
+                noMessMess = false;
+                if(printedNb < messagesArray.size()){
+                    messagesContainer.removeAll();
+                    printedNb = 0;
+                    for (KasMessage messageItem : messagesArray) {
+                        messagesContainer.add(new KasMessageUI(messageItem));
+                        messagesContainer.revalidate();
+                        System.out.println("[INFO] : Message found");
+                        printedNb++;
+                        System.out.println(printedNb);
+                    }
+                }
+            }
+        }
     }
 
 
@@ -160,6 +215,13 @@ public class KasWindow extends JFrame {
     public static void clearMessage(){
         messageTextArea.setText("");
         receiverIPTextField.setText("");
+    }
+
+    public static void addMessage(KasMessage mess){
+        messagesArray.add(mess);
+        System.out.println("added message.");
+        System.out.println("is messagesArray not empty ?" + !messagesArray.isEmpty());
+        System.out.println("messagesArray.size() = " + messagesArray.size());
     }
 
 }

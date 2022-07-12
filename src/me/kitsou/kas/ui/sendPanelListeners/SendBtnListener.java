@@ -17,6 +17,6 @@ public class SendBtnListener implements ActionListener {
 
     private void confirmMessage(JFrame window){
         KasMessage message = KasWindow.getMessageData();
-        JOptionPane.showMessageDialog(window, "Do you want to send this message to " + message.getReceiverIP() + " as " + message.getSenderName() + " : \"" + message.getMessageContents() + "\" ?");
+        KasWindow.addMessage(message);
     }
 }
