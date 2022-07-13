@@ -1,9 +1,11 @@
 package me.kitsou.kas.ui;
 
 import me.kitsou.kas.KasApp;
+import me.kitsou.kas.KasMessage;
 import me.kitsou.kas.ui.menuBarListeners.ConnectMenuListener;
 import me.kitsou.kas.ui.menuBarListeners.MyIPListener;
 import me.kitsou.kas.ui.menuBarListeners.SaveMenuItemListener;
+import me.kitsou.kas.ui.menuBarListeners.quitMenuItemListener;
 import me.kitsou.kas.ui.sendPanelListeners.CancelBtnListener;
 import me.kitsou.kas.ui.sendPanelListeners.SendBtnListener;
 
@@ -14,9 +16,9 @@ import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
 public class KasWindow extends JFrame {
-    private static JTextField nameTextField = new JTextField("", 15);
-    private static JTextField receiverIPTextField = new JTextField("", 15);
-    private static JTextArea messageTextArea = new JTextArea("", 7, 15);
+    private static final JTextField nameTextField = new JTextField("", 15);
+    private static final JTextField receiverIPTextField = new JTextField("", 15);
+    private static final JTextArea messageTextArea = new JTextArea("", 7, 15);
 
     public KasWindow(String title){
         // WINDOW DATA
@@ -149,7 +151,7 @@ public class KasWindow extends JFrame {
                     noMessMess = true;
                     System.out.println("[INFO] : No message");
                 }
-                System.out.println("[INFO] : Messages Array is empty");
+                //System.out.println("[INFO] : Messages Array is empty");
             } else {
                 messagesContainer.remove(noMessLabel);
                 System.out.println((printedNb < KasApp.getMessagesArray().size()) + " cuz nb " + printedNb + " size " + KasApp.getMessagesArray().size());
@@ -162,7 +164,7 @@ public class KasWindow extends JFrame {
                         messagesContainer.revalidate();
                         System.out.println("[INFO] : Message found");
                         printedNb++;
-                        System.out.println(printedNb);
+                        System.out.println(printedNb); //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
                     }
                 }
             }
@@ -194,6 +196,12 @@ public class KasWindow extends JFrame {
         JMenuItem myIP = new JMenuItem("Whats my IP?");
         myIP.addActionListener(new MyIPListener());
         file.add(myIP);
+
+        file.addSeparator();
+
+        JMenuItem quit = new JMenuItem("Quit");
+        quit.addActionListener(new quitMenuItemListener());
+        file.add(quit);
 
         return menuBar;
     }

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="fixed ip check">
+    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="refactored some things">
+      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/KasSocketManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/ListenThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/SendThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/menuBarListeners/quitMenuItemListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/KasApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasMessageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasMessageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/menuBarListeners/MyIPListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/menuBarListeners/MyIPListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/sendPanelListeners/SendBtnListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/sendPanelListeners/SendBtnListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +35,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2BkwfCYRI8nJE1nRD3irNAOGt2W" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -37,23 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ToolWindowRun.ShowToolbar": "false",
-    "last_opened_file_path": "C:/Program Files/Java/libraries",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Java/libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="me.kitsou.kas.KasApp" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="me.kitsou.kas.socketManager" />
+      <recent name="me.kitsou.kas" />
       <recent name="me.kitsou.kas.ui" />
     </key>
   </component>
@@ -163,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657631859838</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactored some things">
+      <created>1657634097864</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1657634097864</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,6 +207,17 @@
     <MESSAGE value="finished messagePanel and implemented an arraylist" />
     <MESSAGE value="Blocked the user from sending either an empty mess, with an empty name or to an empty ip" />
     <MESSAGE value="fixed ip check" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed ip check" />
+    <MESSAGE value="refactored some things" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored some things" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

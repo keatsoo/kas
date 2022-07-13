@@ -1,9 +1,11 @@
-package me.kitsou.kas.ui;
+package me.kitsou.kas;
 
-public class KasMessage {
-    private String sender;
-    private String receiverIP;
-    private String messageContents;
+import java.io.Serializable;
+
+public class KasMessage implements Serializable {
+    private final String sender;
+    private final String receiverIP;
+    private final String messageContents;
 
     public KasMessage(String sender, String senderIP, String messageContents){
         this.sender = sender;

@@ -1,5 +1,7 @@
 package me.kitsou.kas.ui;
 
+import me.kitsou.kas.KasMessage;
+
 import javax.swing.*;
 import java.awt.*;
 
