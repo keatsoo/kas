@@ -11,25 +11,27 @@ import java.net.Socket;
 
 public class ListenThread implements Runnable{
 
-    ServerSocket servSock;
+    ServerSocket servSock = KasApp.getSockMgr().getSendSocket();
 
-    public ListenThread(ServerSocket servSockParam) {
-        this.servSock = servSockParam;
+    public ListenThread() {
+
     }
 
     @Override
     public void run() {
-        try {
-            System.out.println("Currently listening on port : " + this.servSock.getLocalPort());
-            Socket sock = this.servSock.accept();
-            System.out.println(sock + " has just connected ! ");
-            InputStream in = sock.getInputStream();
-            ObjectInputStream receivedKasMessageStream = new ObjectInputStream(in);
-            KasMessage kasMessage = (KasMessage) receivedKasMessageStream.readObject();
-            System.out.println("A message has just been received !");
-            KasApp.addMessage(kasMessage);
-        } catch (IOException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
+        while (true){
+            try {
+                System.out.println("[LISTEN THREAD] : Currently listening on port : " + this.servSock.getLocalPort());
+                Socket sock = this.servSock.accept();
+                System.out.println("[LISTEN THREAD] : " + sock + " has just connected ! ");
+                InputStream in = sock.getInputStream();
+                ObjectInputStream receivedKasMessageStream = new ObjectInputStream(in);
+                KasMessage kasMessage = (KasMessage) receivedKasMessageStream.readObject();
+                System.out.println("[LISTEN THREAD] : A message has just been received !");
+                KasApp.addMessage(kasMessage);
+            } catch (IOException | ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }

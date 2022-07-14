@@ -22,12 +22,12 @@ public class SendThread implements Runnable {
     public void run() {
         try {
             Socket sendSock = new Socket(address, port);
-            System.out.println("Just connected to : " + address + " !");
+            System.out.println("[SEND THREAD] : Just connected to : " + address + " !");
 
             OutputStream os = sendSock.getOutputStream();
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(os);
             objectOutputStream.writeObject(kasMessage);
-            System.out.println("Message sent !");
+            System.out.println("[SEND THREAD] : Message sent !");
             sendSock.close();
         } catch (UnknownHostException e){
             KasApp.showErrorMessage("Couldn't find them !");

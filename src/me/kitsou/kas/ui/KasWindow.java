@@ -151,10 +151,10 @@ public class KasWindow extends JFrame {
                     noMessMess = true;
                     System.out.println("[INFO] : No message");
                 }
-                //System.out.println("[INFO] : Messages Array is empty");
+                messagesContainer.revalidate();
             } else {
                 messagesContainer.remove(noMessLabel);
-                System.out.println((printedNb < KasApp.getMessagesArray().size()) + " cuz nb " + printedNb + " size " + KasApp.getMessagesArray().size());
+                messagesContainer.revalidate();
                 noMessMess = false;
                 if(printedNb < KasApp.getMessagesArray().size()){
                     messagesContainer.removeAll();
@@ -164,7 +164,6 @@ public class KasWindow extends JFrame {
                         messagesContainer.revalidate();
                         System.out.println("[INFO] : Message found");
                         printedNb++;
-                        System.out.println(printedNb); //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
                     }
                 }
             }

@@ -1,6 +1,7 @@
 package me.kitsou.kas;
 
 import me.kitsou.kas.socketManager.KasSocketManager;
+import me.kitsou.kas.socketManager.ListenThread;
 import me.kitsou.kas.ui.KasWindow;
 
 import javax.swing.*;
@@ -11,24 +12,28 @@ public class KasApp {
     static private final KasSocketManager sockMgr = new KasSocketManager(64209);
     static private KasWindow window;
     public static void main(String[] args){
-        System.out.println("Started kas... :)");
-        setWindow(new KasWindow("kas - STILL IN PROTOTYPE PHASE"));
-        sockMgr.createListenThread();
+        System.out.println("[STARING] : Started kas... :)");
+
+        System.out.println("[INFO] : Starting thread");
+        ListenThread listenThreadRunnable = new ListenThread();
+        Thread listenThread = new Thread(listenThreadRunnable);
+        listenThread.start();
+        System.out.println("[INFO] : Thread started !");
+
+        System.out.println("[INFO] : Creating the window...");
+        setWindow(new KasWindow("kas - STILL IN PROTOTYPE PHASE")); // ALWAYS RUN LAST
     }
 
     public static void addMessage(KasMessage mess){
         messagesArray.add(mess);
-        System.out.println("added message.");
-        System.out.println("is messagesArray not empty ?" + !messagesArray.isEmpty());
-        System.out.println("messagesArray.size() = " + messagesArray.size());
-
+        System.out.println("[INFO] : Added message.");
     }
 
     public static ArrayList<KasMessage> getMessagesArray(){
         return messagesArray;
     }
     public static void sendMessageOverIP(KasMessage messageToSend){
-        sockMgr.createSendThread("192.168.1.30", 64209, new KasMessage("me","192.168.1.30","test"));
+        sockMgr.createSendThread(messageToSend.getReceiverIP(), 64209, messageToSend);
     }
 
     public static KasWindow getWindow() {
@@ -43,4 +48,7 @@ public class KasApp {
         JOptionPane.showMessageDialog(getWindow(), error, "Error !", JOptionPane.ERROR_MESSAGE);
     }
 
+    public static KasSocketManager getSockMgr(){
+        return sockMgr;
+    }
 }

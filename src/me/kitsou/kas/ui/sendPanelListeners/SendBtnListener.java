@@ -22,15 +22,15 @@ public class SendBtnListener implements ActionListener {
                     KasApp.sendMessageOverIP(KasWindow.getMessageData());
                 } else {
                     KasApp.showErrorMessage("Please enter a message !");
-                    System.err.println("EMPTY MESSAGE !");
+                    System.err.println("[ERROR] : EMPTY MESSAGE !");
                 }
             } else {
                 KasApp.showErrorMessage("The IP must be valid !");
-                System.err.println("INVALID IP !");
+                System.err.println("[ERROR] : INVALID IP !");
             }
         } else {
             KasApp.showErrorMessage("The name can't be empty !");
-            System.err.println("EMPTY NAME !");
+            System.err.println("[ERROR] : EMPTY NAME !");
         }
     }
 

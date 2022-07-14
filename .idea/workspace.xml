@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="refactored some things">
-      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/KasSocketManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/ListenThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/SendThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/menuBarListeners/quitMenuItemListener.java" afterDir="false" />
+    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="added socket management">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/KasApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasMessageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasMessageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/KasSocketManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/KasSocketManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/ListenThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/ListenThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/SendThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/SendThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/menuBarListeners/MyIPListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/menuBarListeners/MyIPListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/sendPanelListeners/SendBtnListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/sendPanelListeners/SendBtnListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657634097864</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added socket management">
+      <created>1657743504905</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1657743504905</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,7 +210,8 @@
     <MESSAGE value="Blocked the user from sending either an empty mess, with an empty name or to an empty ip" />
     <MESSAGE value="fixed ip check" />
     <MESSAGE value="refactored some things" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored some things" />
+    <MESSAGE value="added socket management" />
+    <option name="LAST_COMMIT_MESSAGE" value="added socket management" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
