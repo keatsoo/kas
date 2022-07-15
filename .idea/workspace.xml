@@ -6,12 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="THE SENDING MESSAGE OVER IP SYSTEM WORKS NOW !!!!!!!!!!!!!!mm^dlpckedùczkopucxhriezn&#10;AT LAAAASSSTTTTTT">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/KasApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/SendThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/SendThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasMessageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasMessageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasWindow.java" afterDir="false" />
+    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="EVERYTHING WORKS FINE NOW WOOHOOOOOOOOOOOOOOO">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657810234052</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="EVERYTHING WORKS FINE NOW WOOHOOOOOOOOOOOOOOO">
+      <created>1657884536377</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1657884536377</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +226,8 @@
     <MESSAGE value="refactored some things" />
     <MESSAGE value="added socket management" />
     <MESSAGE value="THE SENDING MESSAGE OVER IP SYSTEM WORKS NOW !!!!!!!!!!!!!!mm^dlpckedùczkopucxhriezn&#10;AT LAAAASSSTTTTTT" />
-    <option name="LAST_COMMIT_MESSAGE" value="THE SENDING MESSAGE OVER IP SYSTEM WORKS NOW !!!!!!!!!!!!!!mm^dlpckedùczkopucxhriezn&#10;AT LAAAASSSTTTTTT" />
+    <MESSAGE value="EVERYTHING WORKS FINE NOW WOOHOOOOOOOOOOOOOOO" />
+    <option name="LAST_COMMIT_MESSAGE" value="EVERYTHING WORKS FINE NOW WOOHOOOOOOOOOOOOOOO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
