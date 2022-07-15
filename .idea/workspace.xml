@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="kas:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="added socket management">
+    <list default="true" id="cf018440-310c-46a9-9a6d-411c24077dd6" name="Changes" comment="THE SENDING MESSAGE OVER IP SYSTEM WORKS NOW !!!!!!!!!!!!!!mm^dlpckedùczkopucxhriezn&#10;AT LAAAASSSTTTTTT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/KasApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/KasApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/KasSocketManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/KasSocketManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/ListenThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/ListenThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/SendThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/socketManager/SendThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasMessageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasMessageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kitsou/kas/ui/KasWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,10 +51,10 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Java/libraries&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -183,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657743504905</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="THE SENDING MESSAGE OVER IP SYSTEM WORKS NOW !!!!!!!!!!!!!!mm^dlpckedùczkopucxhriezn&#10;AT LAAAASSSTTTTTT">
+      <created>1657810234052</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657810234052</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,7 +222,8 @@
     <MESSAGE value="fixed ip check" />
     <MESSAGE value="refactored some things" />
     <MESSAGE value="added socket management" />
-    <option name="LAST_COMMIT_MESSAGE" value="added socket management" />
+    <MESSAGE value="THE SENDING MESSAGE OVER IP SYSTEM WORKS NOW !!!!!!!!!!!!!!mm^dlpckedùczkopucxhriezn&#10;AT LAAAASSSTTTTTT" />
+    <option name="LAST_COMMIT_MESSAGE" value="THE SENDING MESSAGE OVER IP SYSTEM WORKS NOW !!!!!!!!!!!!!!mm^dlpckedùczkopucxhriezn&#10;AT LAAAASSSTTTTTT" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

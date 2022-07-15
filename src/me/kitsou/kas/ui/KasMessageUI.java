@@ -8,6 +8,7 @@ import java.awt.*;
 public class KasMessageUI extends JPanel {
     public KasMessageUI(KasMessage messObj){
         this.setLayout(new GridBagLayout());
+        this.setPreferredSize(new Dimension(300,67));
 
         JLabel senderNameLabel = new JLabel("Sender : ");
         GridBagConstraints gbc = new GridBagConstraints();

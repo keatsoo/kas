@@ -14,6 +14,7 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 public class KasWindow extends JFrame {
     private static final JTextField nameTextField = new JTextField("", 15);
@@ -101,6 +102,8 @@ public class KasWindow extends JFrame {
         messTextAreaConstr.gridx = 1;
         messTextAreaConstr.gridy = 6;
         messTextAreaConstr.gridwidth = 2;
+        messageTextArea.setLineWrap(true);
+        messageTextArea.setWrapStyleWord(true);
         sendingPanel.add(messageTextArea, messTextAreaConstr);
 
         JButton cancelBtn = new JButton("Cancel");
@@ -127,6 +130,7 @@ public class KasWindow extends JFrame {
         messPanConstr.gridx = 2;
         messPanConstr.gridy = 1;
         messPanConstr.weightx = 0.1;
+        messagesPanel.setLayout(new BorderLayout());
         contentPane.add(messagesPanel, messPanConstr);
 
         revalidate();
@@ -135,8 +139,10 @@ public class KasWindow extends JFrame {
         // MESSAGES PANEL VIEWPORT
         JScrollPane messScrollPane = new JScrollPane(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         messagesPanel.add(messScrollPane);
+        //messScrollPane.setPreferredSize(new Dimension(300,200));
         JPanel messagesContainer = new JPanel();
         messagesContainer.setLayout(new BoxLayout(messagesContainer, BoxLayout.PAGE_AXIS));
+        messagesContainer.setPreferredSize(new Dimension(300,200));
         messagesPanel.add(messagesContainer);
 
         // ADD MESSAGES
@@ -159,7 +165,9 @@ public class KasWindow extends JFrame {
                 if(printedNb < KasApp.getMessagesArray().size()){
                     messagesContainer.removeAll();
                     printedNb = 0;
-                    for (KasMessage messageItem : KasApp.getMessagesArray()) {
+                    ArrayList<KasMessage> messagesArray = KasApp.getMessagesArray();
+                    for (int i = 0; i < messagesArray.size(); i++) {
+                        KasMessage messageItem = messagesArray.get(i);
                         messagesContainer.add(new KasMessageUI(messageItem));
                         messagesContainer.revalidate();
                         System.out.println("[INFO] : Message found");

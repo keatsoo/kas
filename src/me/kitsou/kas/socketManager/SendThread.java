@@ -28,6 +28,8 @@ public class SendThread implements Runnable {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(os);
             objectOutputStream.writeObject(kasMessage);
             System.out.println("[SEND THREAD] : Message sent !");
+
+            KasApp.addMessage(kasMessage);
             sendSock.close();
         } catch (UnknownHostException e){
             KasApp.showErrorMessage("Couldn't find them !");
